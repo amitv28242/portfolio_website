@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<boddy>
+<div id="header">
+    <div class="=container">
+        <nav>
+            <ing scr="images/logo.png" class="=logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web devloper</p>
+            <h1>Hi,I am<span> Amit Verma</span> <br>from Uttar Pradesh</h1>
+        </div>
+    </div>
+</div>
+<!--------About------->
+<div id ="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img scr="images/Amit.png">
+            </div>
+            <div class="about-col-2">
+               <h1 class="sub-title">About Me</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil quia labore tempore deserunt praesentium repudiandae nobis maxime. Numquam voluptatibus ipsum similique inventore voluptate temporibus sit quo consectetur repellat soluta.</p>
+               <div class="tab-titles">
+                    <p class="tab-links active-link" onclick=" opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick=" opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick=" opentab('Education')">Education</p>
+               </div>
+                <div class="tab-contents actice-tab" id="skills">
+                    <ul>
+                        <li><span>UI?UX</span><br>Desigen Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Bulinding Android/iOS Apps</li>
+                    </ul>
+                </div>
+                <div class="=tab-contents">
+                    <ul>
+                        <li><span>2021 - current</span><br>UI/UX Desigen Training at ET institute</li>
+                        <li><span>2019 - 2021</span><br>Team lead at starapp LLC.</li>
+                        <li><span>2017 - 2019</span><br>UI/UX  Design Executive at coin Digital Ltd.</li>
+                        <li><span>2016 - 2016</span><br>Internship at ekart eCommerce</li>
+                    </ul>
+                </div>
+                <div class="=tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2025</span><br>B.tech CSE at Galgotias University</li>
+                        <li><span>2019-2021</span><br>10th at Acharya Sri Chandra Dev Inter Collage</li>
+                        <li><span>2017-2019</span><br>12th at Acharya Sri Chandra Dev Inter Collage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------services-->
+*-
+<script>
+    var tablinks = doucument.getElementsByClassName("tab-links");
+    var tabcontents = doucument.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementsById(tabname).classList.add("active-tab"); 
+    }
+</script>
+
+</body>
+</html>
